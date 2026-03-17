@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <section class="players-input">
+        <h1>Tic Tac Toe</h1>
+        <form action="#" method="get"id="player1Form">
+            <label for="player1">Player 1:</label>
+            <input type="text" id="player1" name="player1">
+            <br>
+            <label for="symbol">Choose your symbol:</label>
+            <input type="radio" id="x" name="symbol" value="X" checked>X</input>
+            <input type="radio" id="o" name="symbol" value="O">O</input>
+        </form>
+        <form action="#" method="get" id="player2Form">
+            <label for="player2">Player 2:</label>
+            <input type="text" id="player2" name="player2">
+        </form>
+        <button type="submit">Start Game</button>
+    </section>
+    <section id="players-info">
+        <h2>Players</h2>
+        <div>
+            <p id="player1Name"></p>
+            <p id="player2Name"></p>
+        </div>
+    </section>
+    <div class="game-board">
+        <div data-id="0"></div>
+        <div data-id="1"></div>
+        <div data-id="2"></div>
+        <div data-id="3"></div>
+        <div data-id="4"></div>
+        <div data-id="5"></div>
+        <div data-id="6"></div>
+        <div data-id="7"></div>
+        <div data-id="8"></div>
+    </div>
+    <button id="resetBtn">Reset Game</button>
+    <script src="./script.js"></script>
+</body>
+</html>

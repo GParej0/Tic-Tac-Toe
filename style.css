@@ -1,0 +1,110 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #49c1d9ad;
+    --secondary-color: #97c1d5c7;
+    --accent-color: rgba(118, 38, 38, 0.534);
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    background-color: var(--secondary-color);
+    height: 100vh;
+}
+
+.players-input{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.players-input input{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#players-info{
+    display: none;
+    animation: aparecerTablero 1.5s ease-out forwards;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#players-info > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+.game-board{
+    display: none;
+    animation: aparecerTablero 1.5s ease-out forwards;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: auto;
+    gap: 0.5rem;
+    width: 500px;
+    height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    /* border: 1px solid black; */
+}
+
+.game-board div{
+    border: 2px solid black;
+    cursor: pointer;
+    color: var(--accent-color);
+    font-size: 5rem;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#resetBtn{
+    display: none;
+    align-items: center;
+    margin: auto;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+}
+
+@keyframes aparecerTablero {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1); 
+  }
+}
